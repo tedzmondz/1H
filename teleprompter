@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Voice-Activated Teleprompter</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice-Activated Teleprompter</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-<div class="controls">
-<button id="startBtn">Start Teleprompter</button>
-<button id="stopBtn" disabled>Stop</button>
-<div class="timer">
-<span id="timeDisplay">00:00:00</span>
-</div>
-<div class="speed-control">
-<label for="speed">Scroll Speed:</label>
-<input type="range" id="speed" min="0.5" max="3" step="0.1" value="1">
-<span id="speedValue">1.0x</span>
-</div>
-<div class="sensitivity-control">
-<label for="sensitivity">Voice Sensitivity:</label>
-<input type="range" id="sensitivity" min="0" max="100" value="50">
-<span id="sensitivityValue">50</span>
-</div>
-</div>
+    <div class="container">
+        <div class="controls">
+            <button id="startBtn">Start Teleprompter</button>
+            <button id="stopBtn" disabled>Stop</button>
+            <div class="timer">
+                <span id="timeDisplay">00:00:00</span>
+            </div>
+            <div class="speed-control">
+                <label for="speed">Scroll Speed:</label>
+                <input type="range" id="speed" min="0.5" max="3" step="0.1" value="1">
+                <span id="speedValue">1.0x</span>
+            </div>
+            <div class="sensitivity-control">
+                <label for="sensitivity">Voice Sensitivity:</label>
+                <input type="range" id="sensitivity" min="0" max="100" value="50">
+                <span id="sensitivityValue">50</span>
+            </div>
+        </div>
+        
+        <div class="teleprompter-container">
+            <div id="teleprompter" contenteditable="true">
+                Paste or type your script here...
+                
+                This teleprompter will automatically scroll based on your voice.
+                Speak clearly and it will follow along.
+                
+                You can edit this text directly or paste your entire script.
+                The system listens to your microphone and scrolls when it detects speech.
+                
+                The scroll speed can be adjusted using the slider above.
+                The sensitivity controls how responsive it is to your voice.
+                
+                The timer will track how long you've been speaking.
+                Practice your speech and watch the timer to stay on schedule.
+            </div>
+        </div>
+    </div>
 
-<div class="teleprompter-container">
-<div id="teleprompter" contenteditable="true">
-Paste or type your script here...
-
-This teleprompter will automatically scroll based on your voice.
-Speak clearly and it will follow along.
-
-You can edit this text directly or paste your entire script.
-The system listens to your microphone and scrolls when it detects speech.
-
-The scroll speed can be adjusted using the slider above.
-The sensitivity controls how responsive it is to your voice.
-
-The timer will track how long you've been speaking.
-Practice your speech and watch the timer to stay on schedule.
-</div>
-</div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
